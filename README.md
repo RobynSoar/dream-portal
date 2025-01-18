@@ -42,7 +42,7 @@ View the live site [here]()
 - [Deployment](#deployment)
     - [Version Control](#version-control)
     - [Deployment to Heroku](#deployment-to-heroku)
-    - [Clone the Repository Code Locally](#clone-the-repository-code-locally)
+    - [Clone the Repository in GitHub](#clone-the-repository-code-locally)
 - [Credits](#credits)
     - [Inspired Code](#inspired-code)
     - [Walkthrough Code](#walkthrough-code)
@@ -80,6 +80,8 @@ View the live site [here]()
 
 
 ### Kanban Board
+
+
 
 [Return to Table of Contents](#table-of-contents)
 
@@ -145,13 +147,21 @@ View the live site [here]()
 
 ### Version Control
 
+The site was created using the Git editor and pushed to GitHUb to the remote repository 'rpsls-game'
 
+The following git commands were used throughout development to push code to the remote repository:
+
+```git add <file>``` - This command was used to add the file(s) to the staging area before they are commited.
+
+```git commit -m "commit message"``` - This command was used to commit changes to the local repository queue ready to be pushed.
+
+```git push``` - This command was used to push all committed code to the remote repository 'rpsls-game' on GitHub.
 
 ### Deployment to Heroku
 
 
 
-### Clone the Repository Code Locally
+### Clone the Repository In GitHub
 
 
 
