@@ -1,11 +1,13 @@
 ---
 name: User Story Issue Template
-about: As a **role** I can **capabilities** so that I can **received benefit**.
+about: This is our default user story template
 title: 'USER STORY:'
 labels: ''
 assignees: ''
 
 ---
+
+As a **role** I can **capabilities** so that I can **received benefit**.
 
 #Acceptance Criteria:
 
@@ -15,6 +17,6 @@ assignees: ''
 
 #Tasks:
 
-[]
-[]
-[]
+- []
+- []
+- []
