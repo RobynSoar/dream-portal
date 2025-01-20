@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "DEVELOPMENT" in os.environ
 
-ALLOWED_HOSTS = ['8000-robynsoar-dreamportal-uwgfwgbt33i.ws-eu117.gitpod.io']
+ALLOWED_HOSTS = ['8000-robynsoar-dreamportal-uwgfwgbt33i.ws-eu117.gitpod.io','.herokuapp.com']
 
 
 # Application definition
