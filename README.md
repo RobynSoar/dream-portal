@@ -1,17 +1,23 @@
 # DreamPortal
 (by Robyn Soar)
 
-
+DreamPortal is an online site to collate dreams and/or nightmares into written form to be able to share with others, or record them for personal view in the future.
 
 View the live site [here]()
 
 ## Key Project Goals
 
-
+- A website that has a simple user friendly interface, allowing users to use the site even when half-awake.
+- To allow users to be able to journal their dream experiences and share with others.
+- To allow users to comment on posts.
+- To allow users to be able to bookmark their favourite dreams.
 
 ## Target Audience
 
+The primary target audience for the site is:
 
+- Ages of 13+ looking for a system to store their dreams/nightmares.
+- Those who like to read and gain inspiration for their own writings elsewhere.
 
 ## Table of Contents
 
@@ -135,6 +141,26 @@ View the live site [here]()
 
 ### Fixed Bugs
 
+__Name change / Deployment Bug__
+
+![Application Error](documentation/application-error.png)
+
+While deploying the app for the first time on Heroku, there was an 'Application' Error.
+
+As Heroku informed, I tried to use `heroku logs --tail` and received the following message:
+
+`›   Error: The following error occurred:
+ ›     Missing required flag app
+ ›   See more help with --help`
+
+Searching for my app with `heroku logs --tail --app dream-portal-app" I was greeting with a message to follow a link to authorise login via browser. I wasn't able to do this as an error message of "IP address mismatch" showed and I needed to authorise within the terminal rather than the browser.
+
+[Heroku CLI Commands](https://devcenter.heroku.com/articles/heroku-cli-commands)
+- List of commands used to export API key and connect it to the project.
+
+API Key was found within the Settings > Accounts section of Heroku personal profile.
+
+Further investigation also showed I'd neglected to insert a blank space between authorised hosts in the settinngs.py file.
 
 
 ### Unfixed Bugs
