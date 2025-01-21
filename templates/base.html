@@ -1,7 +1,8 @@
 {% load static %}
+{% url 'home' as home_url %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-100" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -34,11 +35,25 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
-<body>
-    <!-- Header -->
-    <h1>
-        Hello, welcome to DreamPortal!
-    </h1>
+<body class="d-flex flex-column h-100 main-bg">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><h1><span class="brand">DREAM<span class="thin">PORTAL</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Main Content -->
     <main>
