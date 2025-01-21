@@ -21,5 +21,5 @@ from home.views import dream_home
 urlpatterns = [
     path('home/', dream_home, name='home'),
     path('admin/', admin.site.urls),
-    path('', include('home.urls'), name="homeurls"),
+    path('', include('home.urls'), name="home-urls"),
 ]

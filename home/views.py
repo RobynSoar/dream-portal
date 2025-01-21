@@ -17,5 +17,5 @@ def dream_home(request):
 
 
 class PostList(generic.ListView):
-    queryset = Post.objects.all()
+    queryset = Post.objects.order_by("-created_on").filter(status=1)
     template_name = "post_list.html"
