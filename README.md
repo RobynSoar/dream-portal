@@ -34,7 +34,6 @@ The primary target audience for the site is:
     - [Flowchart](#flowchart)
     - [Colour Palette](#terminal-sizing)
     - [Google Fonts](#google-fonts)
-    - [Imported Libraries](#imported-libraries)
     - [Technologies Used](#technologoies-used)
 - [Testing](#testing)
     - [Responsiveness](#responsiveness)
@@ -101,15 +100,35 @@ The primary target audience for the site is:
 
 ### Google Fonts
 
+[Google Fonts](https://fonts.google.com/) was used to import fonts for the site, these include:
 
-
-### Imported Libraries
-
-
+- "Nunito", serif: Used for the site logo and post titles.
+- "Raleway", serif: Used for all other text content site wide.
 
 ### Technologies Used
 
-
+- GitHub
+    - Hosts the DREAMPORTAL repo, used for version control and project management. (GitHub issues, Kanban board)
+- Gitpod
+    - Used for development of the site as well as commit and pushing code throughout.
+- [Heroku](https://dashboard.heroku.com/apps)
+    - Used for deployment of DREAMPORTAL.
+- HTML
+    - The main language used to provide users with the front-end user interface.
+- CSS
+    - Used to style the site, working alongside Bootstrap from within a static file.
+- Bootstrap
+    - CSS framework used for quick and easy styling of site.
+- Django 4.2.18
+    - Python framework used to implement logic.
+- PostgreSQL
+    - Database used to store all data.
+- Whitenoise
+    - Python library for handling static files.
+- Django Summernote
+    - Used to provide extra editing tools to Django admin panel.
+- [Google Fonts]()
+    - Used to import fonts to be used within the site.
 
 [Return to Table of Contents](#table-of-contents)
 
