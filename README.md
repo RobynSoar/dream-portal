@@ -47,7 +47,6 @@ The primary target audience for the site is:
 - [Deployment](#deployment)
     - [Version Control](#version-control)
     - [Deployment to Heroku](#deployment-to-heroku)
-    - [Clone the Repository in GitHub](#clone-the-repository-code-locally)
 - [Credits](#credits)
     - [Inspired Code](#inspired-code)
     - [Walkthrough Code](#walkthrough-code)
@@ -195,7 +194,7 @@ Further investigation also showed I'd neglected to insert a blank space between 
 
 ### Version Control
 
-The site was created using the Git editor and pushed to GitHUb to the remote repository 'rpsls-game'
+The site was created using the Gitpod editor and pushed to GitHub to the remote repository 'dream-portal'
 
 The following git commands were used throughout development to push code to the remote repository:
 
@@ -203,15 +202,33 @@ The following git commands were used throughout development to push code to the 
 
 ```git commit -m "commit message"``` - This command was used to commit changes to the local repository queue ready to be pushed.
 
-```git push``` - This command was used to push all committed code to the remote repository 'rpsls-game' on GitHub.
+```git push``` - This command was used to push all committed code to the remote repository 'dream-portal' on GitHub.
 
 ### Deployment to Heroku
 
-
-
-### Clone the Repository In GitHub
-
-
+- Ensure installation of dependacies required for the project to run by typing ```python3 install [dependency]~=[version]```. e.g. gunicorn.
+- Creat a Procfile in the root directory which contains the code ```web: gunicorn dream-portal.wsgi```.
+- Make sure that Heroku will install dependencies used by typing ```pip3 freeze > requirements.txt``` into the terminal and hit the "Enter" key.
+    - This is to be done after any new dependencies are installed.
+- Make sure to migrate any changes to models before deploying.
+    - Type ```python3 manage.py makemigrations``` into the terminal.
+    - If any migrations are made, type ```python3 manage.py migrate```.
+- Collect all static files by typing ```python3 manage.py collectstatic``` into the terminal and hit the "Enter" key.
+- Make sure DEBUG is set to 'False' in the settings.py file.
+- **Git add .** **git commit -m "[commit message]"** and **git push** the changes to GitHub.
+- Go to Heroku.com and sign up for an account or log in if you already have one.
+- Click "Create new app".
+- Give the app a unique name corresponding to your project name, select region and "Create app".
+- Go to "Settings" and scroll to "Config Vars".
+- Reveal and create Config Vars, any confidental information from within the eny.py file to be added.
+    - DATABASE_URL: (Confidental Value)
+    - SECRET_KEY: (Confidental Value)
+- Click "Deploy" in the navbar at the top of the page.
+- Select "GitHub" within the section called "Deployment method".
+- Click "Connect to GitHub".
+- Under "Connect to GitHub, search for your repository name and click "Connect".
+- Scroll down the page to choose either "Automatic deploys" and click "Enable Automatic Deploys" to enable Heroku to rebuild the app when a new change is pushed to GitHub, or "Manual deploy" and click "Deploy Branch" to deploy manually.
+- When deployment is completed and you're notified that the deployment was successful, click "View" to see your deployed project.
 
 [Return to Table of Contents](#table-of-contents)
 
