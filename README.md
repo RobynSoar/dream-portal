@@ -51,6 +51,7 @@ The primary target audience for the site is:
 - [Credits](#credits)
     - [Inspired Code](#inspired-code)
     - [Walkthrough Code](#walkthrough-code)
+    - [References](#references)
     - [Acknowledgements](#acknowledgements)
 - [Author](#author)
 
@@ -129,6 +130,8 @@ The primary target audience for the site is:
     - Used to provide extra editing tools to Django admin panel.
 - [Google Fonts]()
     - Used to import fonts to be used within the site.
+- [Font Awesome](https://fontawesome.com/)
+    - Used for icons within the site, a Bootstrap CDN was used to make sure it worked along side Bootstrap.
 
 [Return to Table of Contents](#table-of-contents)
 
@@ -220,7 +223,19 @@ The following git commands were used throughout development to push code to the 
 
 ### Walkthrough Code
 
+- [CI - I Think Therefore I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_WTS+4/courseware/713441aba05441dfb3a7cf04f3268b3f/824fccecd0fe4e44871eeabcbf69d830/)
+    - For basic set up and basis for the post and comments model and views.
+- [Daisy Mcgee - Django Recipe Sharing Tutorial](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=2)
+    - For extra understanding of Django.
 
+### References
+
+- [Django Documentation](https://docs.djangoproject.com/en/5.1/)
+    - [Settings](https://docs.djangoproject.com/en/4.2/ref/settings/#staticfiles-dirs-prefixes)
+    - [Model field reference](https://docs.djangoproject.com/en/5.1/ref/models/fields/)
+- [Bootstrap 5 Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- Tutor Support
+    - Admin panel login issue
 
 ### Acknowledgements
 
