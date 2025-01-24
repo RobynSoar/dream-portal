@@ -48,7 +48,6 @@ The primary target audience for the site is:
     - [Version Control](#version-control)
     - [Deployment to Heroku](#deployment-to-heroku)
 - [Credits](#credits)
-    - [Inspired Code](#inspired-code)
     - [Walkthrough Code](#walkthrough-code)
     - [References](#references)
     - [Acknowledgements](#acknowledgements)
@@ -234,10 +233,6 @@ The following git commands were used throughout development to push code to the 
 
 ## Credits
 
-### Inspired Code
-
-
-
 ### Walkthrough Code
 
 - [CI - I Think Therefore I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_WTS+4/courseware/713441aba05441dfb3a7cf04f3268b3f/824fccecd0fe4e44871eeabcbf69d830/)
@@ -253,6 +248,8 @@ The following git commands were used throughout development to push code to the 
 - [Bootstrap 5 Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - Tutor Support
     - Admin panel login issue
+- [DEV - How to add like/unlike button](https://dev.to/radualexandrub/how-to-add-like-unlike-button-to-your-django-blog-5gkg)
+    - Guidance for Like button
 
 ### Acknowledgements
 
