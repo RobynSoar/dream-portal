@@ -1,3 +1,5 @@
+/* base.html */
+
 .brand {
     font-family: Nunito, serif;
     font-size: 2.4rem;
@@ -8,7 +10,7 @@
     font-weight: 300;
 }
 
-.navbar .nav-link {
+.navbar .nav-link.active {
     color: white;
 }
 
@@ -23,4 +25,149 @@
 
 .navbar-toggler-icon {
     filter: invert(1);
+}
+
+.header-bg {
+    background-color: #6D747D;
+}
+
+.footer-bg {
+    background-color: #222529;
+}
+
+/* Content */
+
+.main-bg {
+    background-color: #D7DDE8;
+}
+
+.card {
+    border: none;
+    background-color: transparent;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #6B57E3;
+}
+
+.scale {
+    width: 100%;
+    height: auto;
+}
+
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.masthead {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
+}
+
+.masthead-text {
+    background-color: #6D747D;
+    color: white;
+    position: relative;
+}
+
+.masthead-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.masthead-image:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: #6D747D;
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
+}
+
+.post-link {
+    text-decoration: none;
+    color: #222529;
+}
+
+.post-link:hover,
+.page-link {
+    color: #6B57E3;
+}
+
+.post-title {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: lightgray;
+}
+
+.btn-signup,
+.btn-edit {
+    background-color: #B9B8ED;
+    color: white;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #6B57E3;
+    color: white;
+}
+
+.link {
+    color: #222529;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+    color: #6B57E3;
+    text-decoration: underline;
+}
+
+.btn-like {
+    color: #6B57E3;
+    border: none;
+    background: transparent;
+}
+
+.btn-delete {
+    color: white;
+    background: #6B57E3;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #6B57E3;
+    background: transparent;
+    border: none;
+}
+
+.faded {
+    color: rgb(172, 175, 175);
+}
+
+.approval {
+    color: rgb(222, 146, 168);
 }

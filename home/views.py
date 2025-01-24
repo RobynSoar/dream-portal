@@ -18,4 +18,5 @@ def dream_home(request):
 
 class PostList(generic.ListView):
     queryset = Post.objects.order_by("-created_on").filter(status=1)
-    template_name = "post_list.html"
+    template_name = "home/index.html"
+    paginate_by = 6
