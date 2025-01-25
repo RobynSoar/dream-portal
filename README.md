@@ -130,6 +130,8 @@ The primary target audience for the site is:
     - Used to import fonts to be used within the site.
 - [Font Awesome](https://fontawesome.com/)
     - Used for icons within the site, a Bootstrap CDN was used to make sure it worked along side Bootstrap.
+- [rawpixel](https://www.rawpixel.com/image/556822/vintage-christmas-star)
+    - Used for default post image when user doesn't select their own.
 
 [Return to Table of Contents](#table-of-contents)
 
