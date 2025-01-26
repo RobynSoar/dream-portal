@@ -1,6 +1,7 @@
 /* Global */
 body {
     font-family: Raleway, serif;
+    font-weight: 500;
 }
 
 h1, h2 {
@@ -129,10 +130,14 @@ h1, h2 {
     color: white;
 }
 
+.btn {
+    font-weight: 500;
+}
+
 .btn-signup,
 .btn-edit {
     background-color: #B9B8ED;
-    color: white;
+    color: #222529;
 }
 
 .btn-signup:hover,
@@ -144,6 +149,7 @@ h1, h2 {
 .link {
     color: #222529;
     text-decoration: none;
+    font-weight: bolder;
 }
 
 .link:hover,
