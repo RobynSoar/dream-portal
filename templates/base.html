@@ -64,7 +64,7 @@
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_logout' %}">Logout</a>
+                                href="{% url 'account_logout' %}">Log Out</a>
                         </li>
                     </ul>
                     {% else %}
@@ -76,7 +76,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_login' %}">Login</a>
+                                href="{% url 'account_login' %}">Log In</a>
                         </li>
                     </ul>
                     {% endif %}

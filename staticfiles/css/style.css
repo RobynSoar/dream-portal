@@ -176,6 +176,10 @@ h1, h2 {
     border: none;
 }
 
+.login ul {
+    list-style-position: inside;
+}
+
 .faded {
     color: rgb(172, 175, 175);
 }
