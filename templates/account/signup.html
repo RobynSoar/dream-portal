@@ -8,15 +8,15 @@
   <div class="row">
     <div class="text-center">
       <h3 class="mb-3">{% trans "Sign Up" %}</h3>
-      <p class="mb-3">{% blocktrans %}Already have an account? <a class="link" href="{{ signup_url }}"
-          aria-label="Link to navigate to sign up page">Log in</a> here{% endblocktrans %}</p>
+      <p class="mb-3">{% blocktrans %}Already have an account? <a class="link" href="{{ login_url }}"
+          aria-label="Link to navigate to log in page">Log in</a> here{% endblocktrans %}</p>
       <hr>
       <p class="mb-3">You need to sign up and log in to create your own posts, as well as to bookmark, like or comment on a post.</p>
       <hr>
     </div>
     <div class="text-center">
       <!-- Sign Up Form -->
-      <form class="login" method="POST" action="{% url 'account_login' %}">
+      <form class="signup" method="POST" action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
