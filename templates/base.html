@@ -91,7 +91,7 @@
         <div class="row">
             <div class="col">
                 {% for message in messages %}
-                <div class="alert alert-dismissible fade show
+                <div class="overlay alert alert-dismissible fade show
                 {% if message.tags == 'error' %}alert-danger{% else %}alert-success{% endif %}" id="msg" role="alert">
                     {{ message | safe }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

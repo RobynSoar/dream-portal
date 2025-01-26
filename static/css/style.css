@@ -180,6 +180,14 @@ h1, h2 {
     list-style-position: inside;
 }
 
+.overlay {
+    position: fixed;
+    z-index: 1050;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .faded {
     color: rgb(172, 175, 175);
 }
