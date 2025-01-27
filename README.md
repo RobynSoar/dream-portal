@@ -109,29 +109,35 @@ The primary target audience for the site is:
 - GitHub
     - Hosts the DREAMPORTAL repo, used for version control and project management. (GitHub issues, Kanban board)
 - Gitpod
-    - Used for development of the site as well as commit and pushing code throughout.
+    - Used for development of the site as well as commit and pushing code throughout
 - [Heroku](https://dashboard.heroku.com/apps)
-    - Used for deployment of DREAMPORTAL.
+    - Used for deployment of DREAMPORTAL
 - HTML
-    - The main language used to provide users with the front-end user interface.
+    - The main language used to provide users with the front-end user interface
 - CSS
-    - Used to style the site, working alongside Bootstrap from within a static file.
+    - Used to style the site, working alongside Bootstrap from within a static file
 - Bootstrap
-    - CSS framework used for quick and easy styling of site.
+    - CSS framework used for quick and easy styling of site
 - Django 4.2.18
-    - Python framework used to implement logic.
-- PostgreSQL
-    - Database used to store all data.
-- Whitenoise
-    - Python library for handling static files.
+    - Python framework used to implement logic
+- Django Allauth
+    - Authentication library for user authentication
+- Django Crispy Forms
+    - Render user POST requests
 - Django Summernote
-    - Used to provide extra editing tools to Django admin panel.
-- [Google Fonts]()
-    - Used to import fonts to be used within the site.
+    - Used to provide extra editing tools to Django admin panel
+- PostgreSQL
+    - Database used to store all data
+- Whitenoise
+    - Python library for handling static files
+- [Google Fonts](https://fonts.google.com/)
+    - Used to import fonts to be used within the site
 - [Font Awesome](https://fontawesome.com/)
-    - Used for icons within the site, a Bootstrap CDN was used to make sure it worked along side Bootstrap.
+    - Used for icons within the site, a Bootstrap CDN was used to make sure it worked along side Bootstrap
 - [rawpixel](https://www.rawpixel.com/image/556822/vintage-christmas-star)
-    - Used for default post image when user doesn't select their own.
+    - Used for default post image when user doesn't select their own
+- [Coolors](https://coolors.co/)
+    - Colour palette swatches
 
 [Return to Table of Contents](#table-of-contents)
 
@@ -252,6 +258,8 @@ The following git commands were used throughout development to push code to the 
     - Admin panel login issue
 - [DEV - How to add like/unlike button](https://dev.to/radualexandrub/how-to-add-like-unlike-button-to-your-django-blog-5gkg)
     - Guidance for Like button
+- [Stack Overflow](https://stackoverflow.com/questions/806835/django-redirect-to-previous-page-after-login)
+    - Used for guidance on how to redirect a user to the page they were previously on before log in
 
 ### Acknowledgements
 
