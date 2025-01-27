@@ -109,4 +109,5 @@ def comment_delete(request, slug, comment_id):
     else:
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    # Returns user to previous page and to comments section after comment deletion
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]) + "#comments")
