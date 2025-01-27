@@ -22,18 +22,19 @@
             </div>
             <!-- Comment Counter-->
             <div class="row g-0">
-                <div class="col-12 py-3">
+                <div class="col-12 py-3 d-flex justify-content-between align-items-center">
                     <strong class="ms-3">
                         <i class="far fa-comments"></i> {{ comment_count }}
                     </strong>
-                    <hr>
+                    <!-- View Comments Link -->
+                    <a href="#comments" class="btn btn-comments fs-small"><small>View Comments</small></a>
                 </div>
+                <hr>
             </div>
-            <!-- Comments Section Link -->
         </div>
     </div>
 </div>
-
+<!-- Post Content -->
 <div class="container">
     <div class="row">
         <div class="col card mb-4 left top">
@@ -45,7 +46,7 @@
         </div>
     </div>
     <!-- Displaying Comments -->
-    <div class="row g-0">
+    <div id="comments" class="row g-0">
         <div class="col-12 card mb-4">
             <hr>
             <h3>Comments:</h3>
