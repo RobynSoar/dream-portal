@@ -3,6 +3,8 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+<!-- Post_detail Content Starts -->
+
 <div class="masthead">
     <div class="container">
         <div class="row g-0">
@@ -65,7 +67,8 @@
                 </div>
             </form>
             {% else %}
-            <p><a href="{% url 'account_login' %}?next={{ request.path }}" class="link" aria-label="Link to navigate to log in page">Log in</a>
+            <p><a href="{% url 'account_login' %}?next={{ request.path }}" class="link"
+                    aria-label="Link to navigate to log in page">Log in</a>
                 to leave a comment</p>
             {% endif %}
         </div>
@@ -88,6 +91,9 @@
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
                     </div>
+                    {% if user.is_authenticated and comment.author == user %}
+                    <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+                    {% endif %}
                 </div>
                 {% endfor %}
                 {% else %}
@@ -103,3 +109,8 @@
 </div>
 
 {% endblock content %}
+
+{% block extras %}
+<script src="{% static 'js/comments.js' %}"></script>
+<!-- Post_detail.html Content Ends -->
+{% endblock %}

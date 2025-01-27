@@ -34,7 +34,7 @@ The primary target audience for the site is:
     - [Flowchart](#flowchart)
     - [Colour Palette](#terminal-sizing)
     - [Google Fonts](#google-fonts)
-    - [Technologies Used](#technologoies-used)
+    - [Technologies Used](#technologies-used)
 - [Testing](#testing)
     - [Responsiveness](#responsiveness)
     - [Accessibility](#accessibility)
