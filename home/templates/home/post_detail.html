@@ -88,6 +88,9 @@
                             {{ comment.created_on }} :
                         </span>
                     </p>
+                    {% if comment.edited %}
+                    <p class="text-muted mb-1"><small>(edited)</small></p>
+                    {% endif %}
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
                     </div>
