@@ -187,11 +187,3 @@ h1, h2 {
     left: 50%;
     transform: translateX(-50%);
 }
-
-.faded {
-    color: rgb(172, 175, 175);
-}
-
-.approval {
-    color: rgb(222, 146, 168);
-}

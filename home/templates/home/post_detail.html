@@ -12,6 +12,7 @@
             </div>
             <div class="col-12 masthead-image">
                 <div class="d-none d-md-block col-12 masthead-image">
+                    <!-- Post Image -->
                     {% if "placeholder" in post.image.url %}
                     <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder image">
                     {% else %}
@@ -19,17 +20,53 @@
                     {% endif %}
                 </div>
             </div>
+            <!-- Comment Counter-->
+            <div class="row g-0">
+                <div class="col-12 py-3">
+                    <strong class="ms-3">
+                        <i class="far fa-comments"></i> {{ comment_count }}
+                    </strong>
+                    <hr>
+                </div>
+            </div>
+            <!-- Comments Section Link -->
         </div>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-        <div class="col card mb-4 mt-3 left top">
+        <div class="col card mb-4 left top">
             <div class="card-body">
                 <p class="card-text">
                     {{ post.content | safe }}
                 </p>
+            </div>
+        </div>
+    </div>
+    <!-- Displaying Comments -->
+    <div class="row g-0">
+        <div class="col-12 card mb-4">
+            <hr>
+            <h3>Comments:</h3>
+            <div class="card-body">
+                {% if comments %}
+                {% for comment in comments %}
+                <div class="p-2">
+                    <p class="fw-bold ">
+                        {{ comment.author }}
+                        <span class="fw-normal">
+                            {{ comment.created_on }} :
+                        </span>
+                    </p>
+                    <div id="comment{{ comment.id }}">
+                        {{ comment.body | linebreaks }}
+                    </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <p>There are no comments yet, leave your own to get started!</p>
+                {% endif %}
             </div>
         </div>
     </div>
