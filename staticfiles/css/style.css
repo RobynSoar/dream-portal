@@ -135,14 +135,14 @@ h1, h2 {
 }
 
 .btn-signup,
-.btn-comments,
+.btn-nav,
 .btn-edit {
     background-color: #B9B8ED;
     color: #222529;
 }
 
-.btn-comments .btn-signup:hover,
-.btn-comments .btn-signup:active {
+.btn-nav .btn-signup:hover,
+.btn-nav .btn-signup:active {
     background-color: #6B57E3;
     color: white;
 }
