@@ -65,7 +65,7 @@
                 </div>
             </form>
             {% else %}
-            <p><a href="{% url 'account_login' %}" class="link" aria-label="Link to navigate to log in page">Log in</a>
+            <p><a href="{% url 'account_login' %}?next={{ request.path }}" class="link" aria-label="Link to navigate to log in page">Log in</a>
                 to leave a comment</p>
             {% endif %}
         </div>
