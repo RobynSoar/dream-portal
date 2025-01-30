@@ -23,12 +23,39 @@
                     {% endif %}
                 </div>
             </div>
-            <!-- Comment Counter-->
             <div class="row g-0">
                 <div class="col-12 py-3 d-flex justify-content-between align-items-center">
-                    <strong class="ms-3">
-                        <i class="far fa-comments"></i> {{ comment_count }}
-                    </strong>
+                    <div class="d-flex align-items-center">
+                        <!-- Comment Counter-->
+                        <strong class="ms-3">
+                            <i class="far fa-comments"></i> {{ comment_count }}
+                        </strong>
+                        <!-- Like/Unlike Button and counter-->
+                        <form action="{% url 'toggle_like' post.slug %}" method="POST" class="ms-3">
+                            {% csrf_token %}
+                            {% if user.is_authenticated %}
+                            {% if user in post.likes.all %}
+                            <button type="submit" class="btn btn-like">
+                                <strong>
+                                    <i class="fa-solid fa-heart"></i> {{ post.number_of_likes }}
+                                </strong>
+                            </button>
+                            {% else %}
+                            <button type="submit" class="btn btn-like">
+                                <strong>
+                                    <i class="fa-regular fa-heart"></i> {{ post.number_of_likes }}
+                                </strong>
+                            </button>
+                            {% endif %}
+                            {% else %}
+                            <a href="{% url 'account_login' %}?next={{ request.path }}" class="btn btn-like">
+                                <strong>
+                                    <i class="fa-regular fa-heart"></i> {{ post.number_of_likes }}
+                                </strong>
+                            </a>
+                            {% endif %}
+                        </form>
+                    </div>
                     <!-- View Comments Link -->
                     <a href="#comments" class="btn btn-nav fs-small"><small>View Comments</small></a>
                 </div>
@@ -117,28 +144,24 @@
 </div>
 
 <!-- Delete Confirmation Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1"
-  aria-labelledby="deleteModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content main-bg">
-      <div class="modal-header">
-        <h5 class="modal-title text-white"
-          id="deleteModalLabel">Delete comment?</h5>
-        <button type="button" class="btn-close"
-          data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Are you sure you want to delete your comment?
-        This action cannot be undone.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary"
-          data-bs-dismiss="modal">Close</button>
-        <a id="deleteConfirm" href="#" class="btn
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content main-bg">
+            <div class="modal-header">
+                <h5 class="modal-title text-white" id="deleteModalLabel">Delete comment?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your comment?
+                This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="deleteConfirm" href="#" class="btn
           btn-danger">Delete</a>
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 {% endblock content %}

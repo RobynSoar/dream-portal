@@ -155,3 +155,28 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(
         reverse('post_detail', args=[slug]) + "#comments"
     )
+
+
+def toggle_like(request, slug):
+    """
+    Handles like/unlike toggle for a specific post
+
+    Checks if authenticated user has already liked the post.
+    If user has liked the post, the like is removed;
+    If not, the like is added.
+
+    ``post``
+        An instance of :model:`home.Post`.
+    """
+    post = get_object_or_404(Post, slug=slug)
+
+    # Checks if user has already liked the post
+    if post.likes.filter(id=request.user.id).exists():
+        post.likes.remove(request.user)
+    else:
+        post.likes.add(request.user)
+
+    # Returns user to previous page, after post like/unlike
+    return HttpResponseRedirect(
+        reverse('post_detail', args=[slug])
+    )
