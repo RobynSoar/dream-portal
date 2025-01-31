@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block head_title %}{% trans "My Bookmarked Posts" %}{% endblock head_title %}
+{% block content %}
+
+<!-- My_bookmarks.html Content Starts -->
+<div class="container mt-4">
+    <h3 class="mb-3">{% trans "My Bookmarked Posts" %}</h3>
+
+    <ul class="list-group">
+        {% for post in bookmarked_posts %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                <strong>{{ post.title }}</strong>
+            </a>
+            <p class="text-muted mb-0">by {{ post.author }}</p>
+        </li>
+        {% empty %}
+        <li class="list-group-item text-center text-muted">
+            {% trans "There are currently no bookmarks, please add a bookmark to view them here" %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<!-- My_bookmarks.html Content Ends -->
+{% endblock %}

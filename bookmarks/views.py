@@ -51,22 +51,26 @@ def my_bookmarks(request):
 
     If the user is authenticated, their bookmarked posts will be shown.
     """
-    if request.user.is_authenticated:
-        # Retrieve all bookmarks for the logged-in user
-        bookmarks = Bookmark.objects.filter(user=request.user)
-
-        # Fetch the posts related to bookmarks
-        bookmarked_posts = [bookmark.post for bookmark in bookmarks]
-
-        return render(
-            request,
-            'bookmarks/my_bookmarks.html',
-            {
-                'bookmarked_posts': bookmarked_posts
-            }
-        )
-    else:
+    if not request.user.is_authenticated:
         messages.add_message(
             request, messages.ERROR,
             'You need to be logged in to view your bookmarks.'
         )
+
+        return HttpResponseRedirect(reverse('account_login'))
+
+    # Retrieve all bookmarks for the logged-in user
+    bookmarks = Bookmark.objects.filter(user=request.user)
+
+    # Fetch the posts related to bookmarks
+    bookmarked_posts = [bookmark.post for bookmark in bookmarks]
+
+    return render(
+        request,
+        'bookmarks/my_bookmarks.html',
+        {
+            'bookmarked_posts': bookmarked_posts
+        }
+    )
+
+        

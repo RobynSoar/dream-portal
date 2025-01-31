@@ -21,6 +21,7 @@ from home.views import dream_home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', dream_home, name='home'),
+    path('bookmarks/', include('bookmarks.urls')),
     path("accounts/", include("allauth.urls")),
     path('summernote/', include('django_summernote.urls')),
     path('', include('home.urls'), name="home-urls"),

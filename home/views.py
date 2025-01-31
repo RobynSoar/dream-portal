@@ -10,6 +10,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
+from bookmarks.models import Bookmark
 
 
 def dream_home(request):
@@ -56,6 +57,8 @@ def post_detail(request, slug):
         A count of comments related to the post.
     ``comment_form``
         An instance of :form:`home.CommentForm`.
+    ``is_bookmarked``
+        Boolean indicating if the post is bookmarked.
 
     **Template:**
 
@@ -66,6 +69,11 @@ def post_detail(request, slug):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.count()
+
+    # Checks if post is bookmarked by the user
+    is_bookmarked = False
+    if request.user.is_authenticated:
+        is_bookmarked = Bookmark.objects.filter(user=request.user, post=post).exists()
 
     # If user submits a comment
     if request.method == "POST":
@@ -90,6 +98,7 @@ def post_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+            "is_bookmarked": is_bookmarked,
         },
     )
 
