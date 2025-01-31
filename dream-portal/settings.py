@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'cloudinary',
     'home',
+    'bookmarks',
 ]
 
 # Tells Django the site number
