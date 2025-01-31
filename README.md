@@ -1,7 +1,7 @@
 # DreamPortal
 (by Robyn Soar)
 
-DreamPortal is an online site to collate dreams and/or nightmares into written form to be able to share with others, or record them for personal view in the future.
+DreamPortal is an online site to capture dreams and/or nightmares into written form to be able to share with others, or record them for personal view in the future.
 
 View the live site [here]()
 
@@ -96,6 +96,15 @@ The primary target audience for the site is:
 
 ### Colour Palette
 
+The following colour palette was used thorugh the site, providing a simple and gentle selection of colours. Keeping in mind that users may be just waking when using the site.
+
+- #6D747D - Branding / Navbar
+- #D7DDE8 - Main background coloru site wide
+- #B9B8ED - Light accents for buttons
+- #6B57E3 - Key highlights and attention-grabbing elements
+- #222529 - Footer / text main text colour
+
+![Dreamportal Colour Palette](documentation/colour-palette.png)
 
 ### Google Fonts
 
@@ -138,6 +147,9 @@ The primary target audience for the site is:
     - Used for default post image when user doesn't select their own
 - [Coolors](https://coolors.co/)
     - Colour palette swatches
+- [Icons8](https://icons8.com/)
+    - Favicon image
+
 
 [Return to Table of Contents](#table-of-contents)
 
