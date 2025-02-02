@@ -17,6 +17,10 @@ class Bookmark(models.Model):
     ``post``
         Foreign key - The post that was bookmarked
     """
+
+    # Enables IDE to see the objects declared to erase warning
+    objects = models.Manager()
+
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     post = models.ForeignKey(
         'home.Post', on_delete=models.CASCADE, related_name='bookmarks'

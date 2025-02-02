@@ -40,6 +40,10 @@ class Post(models.Model):
     ``image``
         An optional image for the post, stored via Cloudinary.
     """
+
+    # Enables IDE to see the objects declared to erase warning
+    objects = models.Manager()
+
     DREAM_OR_NIGHTMARE_CHOICES = [
         ('dream', 'Dream'),
         ('nightmare', 'Nightmare'),
