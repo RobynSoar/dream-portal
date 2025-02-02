@@ -62,14 +62,11 @@ def my_bookmarks(request):
     # Retrieve all bookmarks for the logged-in user
     bookmarks = Bookmark.objects.filter(user=request.user)
 
-    # Fetch the posts related to bookmarks
-    bookmarked_posts = [bookmark.post for bookmark in bookmarks]
-
     return render(
         request,
         'bookmarks/my_bookmarks.html',
         {
-            'bookmarked_posts': bookmarked_posts
+            'bookmarks': bookmarks
         }
     )
 

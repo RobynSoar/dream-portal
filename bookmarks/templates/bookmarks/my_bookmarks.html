@@ -10,13 +10,13 @@
 
     <ul class="list-group">
         {% if user.is_authenticated %}
-        {% for post in bookmarked_posts %}
+        {% for bookmark in bookmarks %}
         <li class="list-group-item d-flex justify-content-between align-items-center">
             <div>
-                <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                    <strong>{{ post.title }}</strong>
+                <a href="{% url 'post_detail' bookmark.post.slug %}" class="post-link">
+                    <strong>{{ bookmark.post.title }}</strong>
                 </a>
-                <p class="text-muted mb-0">by {{ post.author }}</p>
+                <p class="text-muted mb-0">by {{ bookmark.post.author }}</p>
             </div>
             <button class="btn btn-bookmark-delete" data-id="{{ bookmark.id }}">Delete</button>
         </li>
