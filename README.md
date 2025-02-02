@@ -200,8 +200,17 @@ Searching for my app with `heroku logs --tail --app dream-portal-app" I was gree
 
 API Key was found within the Settings > Accounts section of Heroku personal profile.
 
-Further investigation also showed I'd neglected to insert a blank space between authorised hosts in the settinngs.py file.
+Further investigation also showed I'd neglected to insert a blank space between authorised hosts in the settings.py file.
 
+__No 'Objects' Member Bug__
+
+Pylint extension flagging an error/warning. Stating ``Class 'Post' has no 'objects' member`` and ``Class 'Bookmark' has no 'objects' member``.
+
+![No Objects Member Warnings](documentation/no-objects-member.png)
+
+Found that this is more of a warning from the IDE, as Django adds the objects property dynamically to all model classes, and thus the IDE doesn't know about it through simply looking at class declaration.
+
+Added ``objects = models.Manager()`` within models to get rid of this warning.
 
 ### Unfixed Bugs
 
