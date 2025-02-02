@@ -16,7 +16,7 @@ const deleteBookmarkConfirm = document.getElementById("deleteBookmarkConfirm");
 for (let button of deleteBookmarkButtons) {
     button.addEventListener("click", (e) => {
       let bookmarkId = e.target.getAttribute("data_id");
-      deleteConfirmButton.setAttribute('href', `/bookmarks/delete-bookmark/${bookmarkId}/`);
+      deleteBookmarkConfirm.setAttribute('href', `/bookmarks/delete-bookmark/${bookmarkId}/`);
       deleteBookmarkModal.show();
     });
   }
