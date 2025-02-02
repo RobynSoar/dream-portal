@@ -212,6 +212,8 @@ Found that this is more of a warning from the IDE, as Django adds the objects pr
 
 Added ``objects = models.Manager()`` within models to get rid of this warning.
 
+With help from [this thread](https://stackoverflow.com/questions/45135263/class-has-no-objects-member) on stackoverflow to combat this warning.
+
 ### Unfixed Bugs
 
 
