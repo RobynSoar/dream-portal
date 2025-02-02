@@ -107,7 +107,7 @@
             <h3>Leave a comment:</h3>
             {% if user.is_authenticated %}
             <p>Commenting as: {{ user.username }}</p>
-            <form id="commentForm" method="post" style="margin-top: 1.3em;">
+            <form id="commentForm" method="POST" style="margin-top: 1.3em;">
                 {{ comment_form | crispy }}
                 {% csrf_token %}
                 <div class="d-flex">
@@ -164,7 +164,7 @@
     </div>
 </div>
 
-<!-- Delete Confirmation Modal -->
+<!-- Delete Comment Confirmation Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content main-bg">

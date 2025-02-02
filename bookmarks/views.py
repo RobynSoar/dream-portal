@@ -5,7 +5,7 @@ Functionality to bookmark posts, and display previously
 bookmarked posts to the user.
 """
 
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from home.models import Post
@@ -73,4 +73,33 @@ def my_bookmarks(request):
         }
     )
 
-        
+
+def delete_bookmark(request, bookmark_id):
+    """
+    View to delete an individual bookmark.
+
+    **Context**
+
+    ``bookmark``
+        An instance of :model:`bookmarks.Bookmark`,
+        associated with the authenticated user and the given post.
+    """
+    if request.user.is_authenticated:
+        # Finds and deletes the bookmark, or returns a 404 if not found
+        bookmark = get_object_or_404(
+            Bookmark, id=bookmark_id, user=request.user
+        )
+        bookmark.delete()
+        messages.add_message(
+            request, messages.SUCCESS, "Bookmark removed successfully."
+        )
+
+        # Redirect to the 'My Bookmarks' page
+        return redirect('my_bookmarks')
+
+    messages.add_message(
+        request, messages.ERROR,
+        "You need to be logged in to delete bookmarks."
+    )
+
+    return HttpResponseRedirect(reverse('account_login'))

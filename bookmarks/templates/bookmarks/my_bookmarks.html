@@ -9,19 +9,50 @@
     <h3 class="mb-3">{% trans "My Bookmarked Posts" %}</h3>
 
     <ul class="list-group">
+        {% if user.is_authenticated %}
         {% for post in bookmarked_posts %}
         <li class="list-group-item d-flex justify-content-between align-items-center">
-            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                <strong>{{ post.title }}</strong>
-            </a>
-            <p class="text-muted mb-0">by {{ post.author }}</p>
+            <div>
+                <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                    <strong>{{ post.title }}</strong>
+                </a>
+                <p class="text-muted mb-0">by {{ post.author }}</p>
+            </div>
+            <button class="btn btn-bookmark-delete" data-id="{{ bookmark.id }}">Delete</button>
         </li>
         {% empty %}
         <li class="list-group-item text-center text-muted">
             {% trans "There are currently no bookmarks, please add a bookmark to view them here" %}
         </li>
         {% endfor %}
+        {% endif %}
     </ul>
 </div>
+
+<!-- Delete Bookmark Confirmation Modal -->
+<div class="modal fade" id="deleteBookmarkModal" tabindex="-1" aria-labelledby="deleteBookmarkModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content main-bg">
+            <div class="modal-header">
+                <h5 class="modal-title text-white" id="deleteBookmarkModalLabel">Delete bookmark?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this bookmark?
+                This action cannot be undone.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <a id="deleteBookmarkConfirm" href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}
+
+{% block extras %}
+<script src="{% static 'js/bookmarks.js' %}"></script>
 <!-- My_bookmarks.html Content Ends -->
 {% endblock %}

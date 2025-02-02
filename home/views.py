@@ -8,9 +8,9 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
+from bookmarks.models import Bookmark
 from .models import Post, Comment
 from .forms import CommentForm
-from bookmarks.models import Bookmark
 
 
 def dream_home(request):
@@ -73,7 +73,9 @@ def post_detail(request, slug):
     # Checks if post is bookmarked by the user
     is_bookmarked = False
     if request.user.is_authenticated:
-        is_bookmarked = Bookmark.objects.filter(user=request.user, post=post).exists()
+        is_bookmarked = Bookmark.objects.filter(
+            user=request.user, post=post
+        ).exists()
 
     # If user submits a comment
     if request.method == "POST":
