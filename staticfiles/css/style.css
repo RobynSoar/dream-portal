@@ -1,15 +1,12 @@
-/* Global */
+/* Fonts */
 body {
     font-family: Raleway, serif;
     font-weight: 500;
 }
 
-h1, h2 {
-    font-family: Nunito, serif;
-}
-
-/* base.html */
-.brand {
+.brand,
+h1,
+h2 {
     font-family: Nunito, serif;
     font-size: 2.4rem;
     font-weight: 700;
@@ -20,6 +17,7 @@ h1, h2 {
     font-weight: 300;
 }
 
+/* Navbar / base.html */
 .navbar .nav-link.active {
     color: white;
 }
@@ -46,8 +44,6 @@ h1, h2 {
     background-color: #222529;
 }
 
-/* Content */
-
 .main-bg {
     background-color: #D7DDE8;
 }
@@ -67,6 +63,8 @@ h1, h2 {
 .banner p {
     margin: 5px;
 }
+
+/* Content */
 
 .card {
     border: none;
@@ -132,13 +130,25 @@ h1, h2 {
     margin: 0 auto;
 }
 
+.link {
+    color: #222529;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.link:hover,
+.link:active {
+    color: #6B57E3;
+    text-decoration: underline;
+}
+
 .post-link {
     text-decoration: none;
     color: #222529;
 }
 
 .post-link:hover,
-.page-link {
+.page-link:hover {
     color: #6B57E3;
 }
 
@@ -152,57 +162,9 @@ h1, h2 {
     color: white;
 }
 
-.btn {
-    font-weight: 500;
-}
-
-.btn-signup,
-.btn-nav,
-.btn-edit {
-    background-color: #B9B8ED;
-    color: #222529;
-}
-
-.btn-nav .btn-signup:hover,
-.btn-nav .btn-signup:active {
-    background-color: #6B57E3;
-    color: white;
-}
-
-.link {
-    color: #222529;
-    text-decoration: none;
-    font-weight: bolder;
-}
-
-.link:hover,
-.link:active {
-    color: #6B57E3;
-    text-decoration: underline;
-}
-
-.btn-like {
-    color: #6B57E3;
-    border: 1px solid #B9B8ED;
-    background: transparent;
-}
-
 .fa-icon i {
     vertical-align: middle;
     font-size: 1.1rem;
-}
-
-.btn-delete,
-.btn-bookmark-delete {
-    color: white;
-    background: #6B57E3;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #6B57E3;
-    background: transparent;
-    border: 1px solid #6B57E3;
 }
 
 .signup ul {
@@ -219,4 +181,49 @@ h1, h2 {
 
 .modal-header {
     background-color: #6B57E3;
+}
+
+/* Buttons */
+.btn {
+    font-weight: 500;
+    background-color: #B9B8ED;
+    color: #222529;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #6B57E3;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6D747D;
+    color: white;
+}
+
+.btn-delete,
+.btn-bookmark-delete {
+    color: white;
+    background: #6B57E3;
+}
+
+.btn-delete:hover,
+.btn-delete:active,
+.btn-bookmark-delete:hover,
+.btn-bookmark-delete:active {
+    color: #222529;
+    background: #B9B8ED;
+}
+
+.btn-like {
+    color: #6B57E3;
+    border: 1px solid #B9B8ED;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #6B57E3;
+    background: transparent;
+    border: 1px solid #6B57E3;
 }

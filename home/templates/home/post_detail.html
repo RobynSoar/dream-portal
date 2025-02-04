@@ -78,7 +78,7 @@
                         </form>
                     </div>
                     <!-- View Comments Link -->
-                    <a href="#comments" class="btn btn-nav fs-small"><small>View Comments</small></a>
+                    <a href="#comments" class="btn fs-small"><small>View Comments</small></a>
                 </div>
                 <hr>
             </div>
@@ -98,7 +98,7 @@
     </div>
     <!-- Back To Top Nav (Under Post)-->
     <div class="col-12 py-3 d-flex justify-content-center">
-        <a href="#top" class="btn btn-nav fs-small"><small>Back to top</small></a>
+        <a href="#top" class="btn fs-small"><small>Back to top</small></a>
     </div>
     <!-- Comment Form -->
     <div class="col-12">
@@ -111,7 +111,7 @@
                 {{ comment_form | crispy }}
                 {% csrf_token %}
                 <div class="d-flex">
-                    <button id="submitButton" type="submit" class="btn btn-signup ms-auto">Submit</button>
+                    <button id="submitButton" type="submit" class="btn ms-auto">Submit</button>
                 </div>
             </form>
             {% else %}
@@ -160,7 +160,7 @@
     </div>
     <!-- Back To Top Nav - (Under Comments) -->
     <div class="col-12 py-3 d-flex justify-content-center">
-        <a href="#top" class="btn btn-nav fs-small"><small>Back to top</small></a>
+        <a href="#top" class="btn fs-small"><small>Back to top</small></a>
     </div>
 </div>
 
@@ -179,7 +179,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <a id="deleteConfirm" href="#" class="btn
-          btn-danger">Delete</a>
+          btn-delete">Delete</a>
             </div>
         </div>
     </div>
