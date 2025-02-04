@@ -25,6 +25,9 @@ for (let button of editButtons) {
     commentText.value = commentContent;
     submitButton.innerText = "Update";
     commentForm.setAttribute("action", `edit_comment/${commentId}`);
+
+    // Scroll smoothly to the comment textarea
+    document.getElementById("commentForm").scrollIntoView({ behavior: "smooth" });
   });
 }
 
