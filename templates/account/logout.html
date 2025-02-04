@@ -19,6 +19,7 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
+        <a href="javascript:history.back()" class="btn btn-secondary right mt-3">Cancel</a>
         <button class="btn btn-signup right mt-3" type="submit">{% trans "Sign Out" %}</button>
       </form>
     </div>
