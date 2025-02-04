@@ -73,6 +73,10 @@ h1, h2 {
     background-color: transparent;
 }
 
+.card-title {
+    text-transform: capitalize;
+}
+
 .post-card {
     border: solid 1px #6D747D;
     background-color: rgba(255,255,255,0.5);
@@ -141,6 +145,7 @@ h1, h2 {
 .post-title {
     font-size: 2rem;
     margin: 0;
+    text-transform: capitalize;
 }
 
 .post-subtitle {
