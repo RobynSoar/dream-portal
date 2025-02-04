@@ -268,7 +268,7 @@ The following git commands were used throughout development to push code to the 
 
 - [CI - I Think Therefore I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_WTS+4/courseware/713441aba05441dfb3a7cf04f3268b3f/824fccecd0fe4e44871eeabcbf69d830/)
     - For basic set up and basis for the post and comments model and views.
-- [Daisy Mcgee - Django Recipe Sharing Tutorial](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=2)
+- [Daisy Mcgirr - Django Recipe Sharing Tutorial](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy&index=2)
     - For extra understanding of Django.
 
 ### References
@@ -281,8 +281,12 @@ The following git commands were used throughout development to push code to the 
     - Admin panel login issue
 - [DEV - How to add like/unlike button](https://dev.to/radualexandrub/how-to-add-like-unlike-button-to-your-django-blog-5gkg)
     - Guidance for Like button
-- [Stack Overflow](https://stackoverflow.com/questions/806835/django-redirect-to-previous-page-after-login)
+- [Stack Overflow - ](https://stackoverflow.com/questions/806835/django-redirect-to-previous-page-after-login)
     - Used for guidance on how to redirect a user to the page they were previously on before log in
+- [mdn_](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView)
+    - Used for javascript .scrollIntoView guidance to move user to comment edit text area on clicking 'edit' button
+- [Stack Overflow - Cancel Auth Button](https://stackoverflow.com/questions/8067510/onclick-javascript-to-make-browser-go-back-to-previous-page)
+    - Guidance on implemening a simple cancel button for auth pages to return users to previous page
 
 ### Acknowledgements
 
