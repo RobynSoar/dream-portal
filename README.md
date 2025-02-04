@@ -200,10 +200,14 @@ __CI Python Linter__
 
 __JShint__
 
- - JShint flags Bootstrap as an 'Underfined Variable', this is used in the walkthrough and is cause by cross referencing scripts, this is not considered an issue.
+ - [JShint](https://jshint.com/) flags Bootstrap as an 'Underfined Variable', this is used in the walkthrough and is cause by cross referencing scripts, this is not considered an issue.
 
  ![Bookmarks.js](documentation/bookmarks-js.png)
  ![Comments.js](documentation/comments-js.png)
+
+ __HTML__
+
+ __WAVE Compatibility__
 
 ### Fixed Bugs
 
