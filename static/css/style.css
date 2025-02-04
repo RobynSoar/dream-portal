@@ -52,6 +52,22 @@ h1, h2 {
     background-color: #D7DDE8;
 }
 
+.banner {
+    width: 100vw;
+    height: fit-content;
+    background-color: #B9B8ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #222529;
+    padding: 10px 10px;
+}
+
+.banner p {
+    margin: 5px;
+}
+
 .card {
     border: none;
     background-color: transparent;
