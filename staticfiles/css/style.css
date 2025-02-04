@@ -8,7 +8,6 @@ h1, h2 {
     font-family: Nunito, serif;
 }
 
-
 /* base.html */
 .brand {
     font-family: Nunito, serif;
@@ -17,6 +16,7 @@ h1, h2 {
 }
 
 .thin {
+    font-size: 2.4rem;
     font-weight: 300;
 }
 
