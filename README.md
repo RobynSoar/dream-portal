@@ -149,7 +149,8 @@ The following colour palette was used thorugh the site, providing a simple and g
     - Colour palette swatches
 - [Icons8](https://icons8.com/)
     - Favicon image
-
+- [Pexels](https://www.pexels.com/)
+    - Used to populate the blog posts
 
 [Return to Table of Contents](#table-of-contents)
 
