@@ -36,7 +36,7 @@ The primary target audience for the site is:
     - [User Stories](#user-stories)
     - [Kanban Board](#kanban-board)
 - [Design](#design)
-    - [Flowchart](#flowchart)
+    - [Wireframes](#wireframes)
     - [Colour Palette](#terminal-sizing)
     - [Google Fonts](#google-fonts)
     - [Technologies Used](#technologies-used)
@@ -294,8 +294,23 @@ __Log Out__
 
 ## Design
 
-### Flowchart
+### Wireframes
 
+__Desktop__
+
+(Wireframes: left > right)
+- Landing page / post list
+- Post detail
+- Bookmarks
+- Sign Up
+- Log In
+- Log Out
+
+![Wireframe desktop](documentation/wireframes_desktop.jpg)
+
+__Mobile__
+
+![Wireframe mobile](documentation/wireframes_mobile.jpg)
 
 ### Colour Palette
 
