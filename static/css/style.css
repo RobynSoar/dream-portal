@@ -216,14 +216,14 @@ h2 {
 }
 
 .btn-like {
-    color: #6B57E3;
+    color: #222529;
     border: 1px solid #6B57E3;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #6B57E3;
+    color: #222529;
     background: transparent;
     border: 1px solid #B9B8ED;
 }
