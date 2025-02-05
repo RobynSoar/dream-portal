@@ -27,7 +27,9 @@ The primary target audience for the site is:
 - [Features](#features)
     - [Site Wide](#site-wide)
     - [Landing Page](#landing-page)
-    - [404 Error Page](#404-error-page)
+    - [Post Details](#post-details)
+    - [Bookmarks](#bookmarks)
+    - [Authorisation](#authorisation)
     - [Existing Features](#existing-features)
     - [Features Left to Implement](#features-left-to-implement)
 - [Agile Methodology](#agile-methodology)
@@ -56,15 +58,217 @@ The primary target audience for the site is:
 
 ### Site Wide
 
+__Favicon__
+- The favicon is a little moon and star in the websites main purple accent colour.
+- Provides an image in the tabs header to allow the user to easily identify and associate with DREAMPORTAL.
 
+![Dreamportal Favicon](documentation/dreamportal-favicon.png)
 
-### Landing Page
+__Logo__
+- Contains a link to the Home page from any other page.
 
+![Dreamportal logo](documentation/dreamportal-logo.png)
 
+__Navbar__
+- Responsive
+    - Fully responsive navigational links that collapse into a menu icon on smaller viewports.
 
-### 404 Error Page
+![Navbar - Toggler](documentation/navbar-toggler.png)
 
+- Logged Out
+    - Includes links to different pages.
+    - Sign Up and Login buttons when not logged in.
+    - Displays user log in status and username at all times.
 
+![Navbar - Logged out](documentation/navbar-logged-out.png)
+
+- Logged In
+    - Includes 'Bookmarks' page, which can only be viewed by authorised users.
+    - Logout button when logged in.
+    - Displays user logged in status and username at all times.
+
+![Navbar - Logged In](documentation/navbar-logged-in.png)
+
+__Welcome Banner__
+    - Welcomes new and returning users to the site.
+    - Intruiges the user and provides information about the site's purpose.
+    - Gives them information on what you're able to do on the site.
+
+![Welcome Banner](documentation/welcome-banner.png)
+
+__Footer__
+    - Includes information and links to the site developer's social media profiles.
+    - Links open in a new tab.
+    - Aria tags provided aid in accessibility.
+
+![Footer](documentation/dreamportal-footer.png)
+
+__Alerts__
+
+- Messages are displayed in the top center of the viewport, just below the navbar.
+- They are feedback provided to the user upon doing certain actions.
+- Successful confirmation messages are displayed in green for easy recognition, these display upon success of the following actions:
+    - Logging in
+    - Signing Up
+    - Logging out
+    - Leaving a comment
+    - Editing a comment
+    - Deleting a comment
+    - Liking a post
+    - Bookmarking a post
+    - Deleting a bookmark
+- User can click on the 'X' to close the message.
+
+![Success Message - Sign In](documentation/signin-success.png)
+
+- Error messages are displayed in red upon meeting an error. Such as logging out while on the bookmarks page (Which cannot be viewed without being authorised).
+
+![Error Message - Login To View Bookmarks](documentation/login-view-error.png)
+
+### Landing Page / Blog Post List
+
+__Blog Post List__
+
+- All published posts are displayed on a preview card to the user. In order from newest at the top of the page, to oldest.
+- Each card contains:
+    - Author: Author of the original post
+    - Image: This gives each card it's most easily recogniseable quality, as the author can use an image to hint at a scene or feeling of their dream. If the author doesn't choose an image, a placeholder image will be shown as default.
+    - Post Title: This is the title of the dream story, each title can be clicked on to be taken to see the full details of the post.
+    - Post Excerpt: This is a small sample of text from the full post or a short description of what the full post entails.
+    - Date and Time: The exact date and time of post creation.
+
+![Blog Post List](documentation/landing-page.png)
+
+__Pagination__
+
+- The blog post cards are displayed with 6 posts per page to help manage the flow of information, and reduces the amount of mindless scrolling where a user can easily lose their position.
+- On screens smaller than tablet size, posts can be seen in a single column. Whereas on tablet screen and larger, posts are displayed in 3 columns. Allowing pictures and text to stay uniform and responsive to all viewports.
+
+![Pagination](documentation/pagination-mobile.png)
+
+__Page Navigation__
+
+- Navigation buttons are at the bottom center of each page in the blog post list.
+- If there is another page to go to, it will show a 'Next' button, and the same for if there's previous pages, it will show a 'Previous'.
+- Both give feedback to the user if hovering over the button or if active.
+
+![Page Navigation](documentation/page-nav.png)
+
+### Post Details
+
+![Post Details](documentation/post-details.png)
+
+__Comments__
+
+- No comments
+    - When a post has no comments listed, a small piece of text will inform the user that there is no comments, and prompts them to leave their own.
+
+![No Comments Created](documentation/no-comments.png)
+
+- Leave a comment (Logged out)
+    - To leave a comment, users must be logged in - they will not be authorised to view the text-area to write the comment until then.
+    - If logged out, user can click on the link in this section to be taken straight to the login page.
+    - Users will be brought back to the page they were on before login.
+
+![Leave a Comment - Logged out](documentation/comment-login.png)
+
+- Leave a comment (Logged In)
+    - When logged in, users will be authorised to leave a comment.
+    - Comments will list the Author and date / time of creation.
+    - Comments are listed from newest at the top to oldest.
+
+![Leave a Comment - Logged In](documentation/leave-a-comment.png)
+
+- Edit a comment
+    - To edit a comment, users must be logged in, and be the author of the comment.
+    - Authorisation will only allow a user to edit their own comments.
+    - Once a comment has been edited, the text (edited) will show up within the comment.
+
+![Edit a Comment](documentation/comment-auth-edit.png)
+
+- Delete a comment
+    - To delete a comment, users must be logged in, and be the author of the comment.
+    - Authorisation will only allow a user to delete their own comments.
+    - Once a comment has been deleted, this cannot be undone.
+    - A confirmation modal will pop up to the user upon clicking 'delete', and they will be asked to confirm if they wish to delete.
+
+![Comment Delete Modal](documentation/comment-delete-modal.png)
+
+__Back To Top__
+
+- 'Back To Top' buttons can be found under the post content and under the comments section to allow the user a pleasant experience while navigating the post details page.
+
+![Back To Top Button](documentation/back-button.png)
+
+__Comment Counter / Likes / Bookmark__
+
+- Post info and button bar
+    - Within the viewport of the users device, a comment counter, a likes counter/button, a bookmarks button, and a view comments button can be seen.
+    - The 'View Comments' button can be clicked to take the user to the comments section. This is to give the user a better experience navigating the post details page. Especially when the post content is lengthy.
+    - To leave a comment, like or bookmark a post, the user will have to be logged in, and will be prompted to do so if they try to use these buttons.
+    - Comments counter counts the amount of comments made on the individual post. This shows to all users even when logged out.
+    - Like counter/button counts the amount of likes a post has, but also is used to 'like' a post. Styling makes this intuitive for the user.
+        - Like Font Awesome icon is 'hollow' when unliked and 'filled' when already previously liked by the user.
+    - Bookmark button, 'bookmarks' a post for the user to view later.
+        - Bookmark Font Awesome icon is 'hollow' when not bookmarked and 'filled' when already previously added to bookmarked posts.
+
+![Comment counter / Like / Bookmark](documentation/post-counters.png)
+
+### Bookmarks
+
+- Only users that are logged in are able to see bookmarks, if a user logs out on the bookmarks page. They are redirected to the login page.
+- Bookmarks will only be shown to the the individual user that bookmarked the posts while logged in.
+
+- No Bookmarks
+    - If there are yet to be any bookmarks made by the user, there is a text display to prompt the user to make a bookmark and they'll see them listed.
+
+![No Bookmarks](documentation/bookmark-empty.png)
+
+- Bookmark List
+    - A user can bookmark a post and view them in this list.
+    - Bookmarks display the post Title and Author.
+    - Clicking on the title will take the user back to the post they bookmarked.
+    - To remove a bookmark, a user can click the 'delete' button, and be prompted with a modal.
+
+![Bookmark List](documentation/bookmark-list.png)
+
+- Delete Bookmark Modal
+    -The delete bookmark modal will appear once a user clicks 'delete' and will ask the user to confirm if they wish to delete the bookmark.
+
+![Delete Bookmark Model](documentation/delete-bookmark-modal.png)
+
+### Authorisation
+
+__Sign Up__
+
+- The sign up page begins addressing the user, asking if they have an account and using a link to guide them to the appropriate form.
+- It explains why they need to sign up, and to be authorised to more functionality.
+- Clearly explains what information is needed and goes into more specifics where needed.
+
+![Sign Up Form](documentation/signup-form.png)
+
+- When inputting data into the fields, the form will make sure all fields are appropriately completed.
+- If forms are incomplete/ have mismatching passwords etc the form will guide the user to fix the issue.
+- Provides a cancel button to the user should they change their mind, and returns them to the page they were previously on.
+
+![Form Auth](documentation/form-auth.png)
+
+__Log In__
+
+- Upon entering the log in page, users will be welcomed back to the site.
+- It reinstates whhy you would need to log in and for what extra functions.
+- Guides the user back to the sign up form if they haven't completed sign up.
+- Proves the user the ability to have the site 'rememeber' them so they don't need to log in again.
+- Provides a cancel button to the user should they change their mind, and returns them to the page they were previously on.
+
+![Log In Form](documentation/login-form.png)
+
+__Log Out__
+
+- When user clicks to log out, the log out page confirms with the user if they would like to proceed.
+- Provides a cancel button to the user should they change their mind, and returns them to the page they were previously on.
+
+![Log Out Confirmation](documentation/logout-confirm.png)
 
 ### Existing Features
 

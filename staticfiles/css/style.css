@@ -201,8 +201,13 @@ h2 {
     color: white;
 }
 
+.btn-danger {
+    border-color: transparent !important;
+}
+
 .btn-delete,
-.btn-bookmark-delete {
+.btn-bookmark-delete,
+.btn-danger {
     color: white;
     background: #6B57E3;
 }
@@ -210,7 +215,9 @@ h2 {
 .btn-delete:hover,
 .btn-delete:active,
 .btn-bookmark-delete:hover,
-.btn-bookmark-delete:active {
+.btn-bookmark-delete:active,
+.btn-danger:hover,
+.btn-danger:active {
     color: #222529;
     background: #B9B8ED;
 }
