@@ -1,22 +1,25 @@
 # DreamPortal
 (by Robyn Soar)
 
-DreamPortal is an online site to capture dreams and/or nightmares into written form to be able to share with others, or record them for personal view in the future.
+DreamPortal is an online blog site to capture dreams and/or nightmares into written form to be able to share with others, be able to comment on them, like and bookmark.
 
 View the live site [here]()
+
+![DREAMPORTAL Site Preview](documentation/techsini-site-preview.png)
 
 ## Key Project Goals
 
 - A website that has a simple user friendly interface, allowing users to use the site even when half-awake.
-- To allow users to be able to journal their dream experiences and share with others.
+- To allow users to be able to read dream stories.
 - To allow users to comment on posts.
 - To allow users to be able to bookmark their favourite dreams.
+- To allow users to be able to like posts.
 
 ## Target Audience
 
 The primary target audience for the site is:
 
-- Ages of 13+ looking for a system to store their dreams/nightmares.
+- Ages of 13+ who like to read.
 - Those who like to read and gain inspiration for their own writings elsewhere.
 
 ## Table of Contents
@@ -151,6 +154,8 @@ The following colour palette was used thorugh the site, providing a simple and g
     - To compress image assets to increase site performance
 - [Image Resizer.com](https://imageresizer.com/)
     - To resize images to increase site performance
+- [Techsini - Multi Mockup](https://techsini.com/multi-mockup/index.php)
+    - To show the sites responsivity across a variety of devices
 
 [Return to Table of Contents](#table-of-contents)
 
