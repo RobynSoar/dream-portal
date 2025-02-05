@@ -3,7 +3,7 @@
 
 DreamPortal is an online blog site to capture dreams and/or nightmares into written form to be able to share with others, be able to comment on them, like and bookmark.
 
-View the live site [here]()
+View the live site [here](https://dream-portal-app-eef232b1cdd8.herokuapp.com/)
 
 ![DREAMPORTAL Site Preview](documentation/techsini-site-preview.png)
 
@@ -445,11 +445,11 @@ The following colour palette was used thorugh the site, providing a simple and g
 
 ### User Story Testing
 
-
+Due to unforseen circumstances I was unable to complete testing. However I am confident that all systems and functions work.
 
 ### Functional Testing
 
-
+Due to unforseen circumstances I was unable to complete testing. However I am confident that all systems and functions work.
 
 ### Validator Testing
 
@@ -481,6 +481,16 @@ __JShint__
 ![Comments.js](documentation/comments-js.png)
 
 __HTML__
+
+![index.html](documentation/html-index.png)
+![bookmarks](documentation/html-bookmarks.png)
+![login](documentation/html-login.png)
+![logout](documentation/html-logout.png)
+
+- Errors with signup.html and post_detail.html.
+    These are issues that are in borrowed walkthrough code.
+![signup.html](documentation/html-signup.png)
+![post_detail.html](documentation/html-post_detail.png)
 
 __WAVE Compatibility__
 
