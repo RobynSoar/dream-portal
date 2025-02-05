@@ -28,14 +28,14 @@
                     <div class="d-flex align-items-center">
                         <!-- Comment Counter-->
                         <strong class="ms-2 fa-icon">
-                            <i class="far fa-comments"></i> {{ comment_count }}
+                            <i class="far fa-comments" aria-label="Number of comments on this post"></i> {{ comment_count }}
                         </strong>
                         <!-- Like/Unlike Button and counter-->
                         <form action="{% url 'toggle_like' post.slug %}" method="POST" class="ms-2">
                             {% csrf_token %}
                             {% if user.is_authenticated %}
                             {% if user in post.likes.all %}
-                            <button type="submit" class="btn btn-like fa-icon">
+                            <button type="submit" class="btn btn-like fa-icon" aria-label="Click to like this post">
                                 <strong>
                                     <i class="fa-solid fa-heart"></i> {{ post.number_of_likes }}
                                 </strong>
@@ -59,7 +59,7 @@
                         <form action="{% url 'add_bookmark' post.slug %}" method="post" class="ms-2">
                             {% csrf_token %}
                             {% if user.is_authenticated %}
-                            <button type="submit" class="btn btn-like fa-icon">
+                            <button type="submit" class="btn btn-like fa-icon" aria-label="Click to bookmark this post">
                                 {% if is_bookmarked %}
                                 <strong>
                                     <i class="fa-solid fa-bookmark"></i>
@@ -71,7 +71,7 @@
                                 {% endif %}
                             </button>
                             {% else %}
-                            <a href="{% url 'account_login' %}?next={{ request.path }}" class="btn btn-like fa-icon">
+                            <a href="{% url 'account_login' %}?next={{ request.path }}" class="btn btn-like fa-icon" aria-label="Redirect to login page, account login required to bookmark posts">
                                 <i class="fa-regular fa-bookmark"></i>
                             </a>
                             {% endif %}
