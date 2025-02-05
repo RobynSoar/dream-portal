@@ -28,7 +28,7 @@
                     <div class="d-flex align-items-center">
                         <!-- Comment Counter-->
                         <strong class="ms-2 fa-icon">
-                            <i class="far fa-comments" aria-label="Number of comments on this post"></i> {{ comment_count }}
+                            <i class="far fa-comments"></i> {{ comment_count }}
                         </strong>
                         <!-- Like/Unlike Button and counter-->
                         <form action="{% url 'toggle_like' post.slug %}" method="POST" class="ms-2">
