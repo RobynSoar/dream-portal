@@ -36,14 +36,10 @@ The primary target audience for the site is:
     - [Google Fonts](#google-fonts)
     - [Technologies Used](#technologies-used)
 - [Testing](#testing)
-    - [Responsiveness](#responsiveness)
-    - [Accessibility](#accessibility)
-    - [Lighthouse Testing](#lighthouse-testing)
     - [User Story Testing](#user-story-testing)
     - [Functional Testing](#functional-testing)
     - [Validator Testing](#validator-testing)
     - [Fixed Bugs](#fixed-bugs)
-    - [Unfixed Bugs](#unfixed-bugs)
 - [Deployment](#deployment)
     - [Version Control](#version-control)
     - [Deployment to Heroku](#deployment-to-heroku)
@@ -151,22 +147,14 @@ The following colour palette was used thorugh the site, providing a simple and g
     - Favicon image
 - [Pexels](https://www.pexels.com/)
     - Used to populate the blog posts
+- [Tinypng](https://tinypng.com/)
+    - To compress image assets to increase site performance
+- [Image Resizer.com](https://imageresizer.com/)
+    - To resize images to increase site performance
 
 [Return to Table of Contents](#table-of-contents)
 
 ## Testing
-
-### Responsiveness
-
-
-
-### Accessibility
-
-
-
-### Lighthouse Testing
-
-
 
 ### User Story Testing
 
@@ -256,10 +244,6 @@ Added ``objects = models.Manager()`` within models to get rid of this warning.
 
 With help from [this thread](https://stackoverflow.com/questions/45135263/class-has-no-objects-member) on stackoverflow to combat this warning.
 
-### Unfixed Bugs
-
-
-
 [Return to Table of Contents](#table-of-contents)
 
 ## Deployment
@@ -329,10 +313,14 @@ The following git commands were used throughout development to push code to the 
     - Used for javascript .scrollIntoView guidance to move user to comment edit text area on clicking 'edit' button
 - [Stack Overflow - Cancel Auth Button](https://stackoverflow.com/questions/8067510/onclick-javascript-to-make-browser-go-back-to-previous-page)
     - Guidance on implemening a simple cancel button for auth pages to return users to previous page
+- [Stack Overflow](https://stackoverflow.com/questions/48508750/how-to-force-https-in-a-django-project-using-cloudinary)
+    - Guidance on how to fix 'Mixed Content' error due to cloudinary image security
 
 ### Acknowledgements
 
+Thank you to my friends and classmates giving me the best pep talks to keep my spirits high.
 
+Especially to my fantastic mentor [Gareth McGirr](https://github.com/Gareth-McGirr), for keeping my head on straight and guiding me in the right direction.
 
 [Return to Table of Contents](#table-of-contents)
 
