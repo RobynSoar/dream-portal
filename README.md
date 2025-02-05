@@ -200,14 +200,26 @@ __CI Python Linter__
 
 __JShint__
 
- - [JShint](https://jshint.com/) flags Bootstrap as an 'Underfined Variable', this is used in the walkthrough and is cause by cross referencing scripts, this is not considered an issue.
+- [JShint](https://jshint.com/) flags Bootstrap as an 'Underfined Variable', this is used in the walkthrough and is cause by cross referencing scripts, this is not considered an issue.
 
- ![Bookmarks.js](documentation/bookmarks-js.png)
- ![Comments.js](documentation/comments-js.png)
+![Bookmarks.js](documentation/bookmarks-js.png)
+![Comments.js](documentation/comments-js.png)
 
- __HTML__
+__HTML__
 
- __WAVE Compatibility__
+__WAVE Compatibility__
+
+![WAVE - Landing page](documentation/wave-landing.png)
+![WAVE - Posts page](documentation/wave-posts.png)
+![WAVE - Sign Up page](documentation/wave-signup.png)
+![WAVE - Log In page](documentation/wave-login.png)
+
+__Lighthouse__
+
+![Lighthouse - Landing Page](documentation/lighthouse-landing.png)
+![Lighthouse - Posts Page](documentation/lighthouse-posts.png)
+![Lighthouse - Sign Up Page](documentation/lighthouse-signup.png)
+![Lighthouse - Log In Page](documentation/lighthouse-login.png)
 
 ### Fixed Bugs
 
