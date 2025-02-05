@@ -288,7 +288,46 @@ __Log Out__
 
 ### Kanban Board
 
+View the Kanban board [here](https://github.com/users/RobynSoar/projects/2/views/1)
 
+- User stories were created following CI Agile Working units and placed on a Kanban Board.
+
+- All User stories were created with labels to determine the EPIC and Milestone of the project.
+    - Milestone 1: Initial Set up
+        - Repository, IDE and project board
+        - Initial apps
+        - Initial deployment
+    - Milestone 2: Core Site Functionality
+        - Home page base template
+    - Milestone 3: User Account Registration
+        - User Registration
+        - Log In
+        - Log Out
+    - Milestone 4: User CRUD Functionality
+        - Create posts
+        - View posts
+        - Edit posts
+        - Delete posts
+        - Bookmark posts
+        - Comment
+        - Delete own comment
+    - Milestone 5: Admin Functionality
+        - Manage Users
+        - Manage Posts
+        - Manage Comments
+    - Milestone 6: Testing
+        - Test functionality
+    - Milestone 7: Future Features
+
+- Each User story was also sorted into 'Must Have', 'Should Have', 'Could Have', 'Won't Have', and 'Bug'.
+    - *Must Have* - High Priority,m ust be included to have a functioning website.
+    - *Should Have* - Should be included, but won't cause errors if they're not included.
+    - *Could Have* - Could be included, want to implement at some point but could still be happy with the final result without it.
+    - *Won't Have* - Won't be included in this project, they are future features intended for a future release.
+
+- Each User story has Acceptance Criteria and/or Tasks in order to determine it's completion.
+
+![Kanban Board](documentation/kanban-board.png)
 
 [Return to Table of Contents](#table-of-contents)
 
