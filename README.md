@@ -33,7 +33,6 @@ The primary target audience for the site is:
     - [Existing Features](#existing-features)
     - [Features Left to Implement](#features-left-to-implement)
 - [Agile Methodology](#agile-methodology)
-    - [User Stories](#user-stories)
     - [Kanban Board](#kanban-board)
 - [Design](#design)
     - [Wireframes](#wireframes)
@@ -272,19 +271,27 @@ __Log Out__
 
 ### Existing Features
 
-
+- User authentication, ensuring that users can only access authorised areas of the site within their role.
+- Clear success and error messages are displayed to the user as feedback to their actions.
+- Responsive simple design that looks good on any device size.
+- CRUD functionality (Create, Read, Update, Delete) is available to users.
 
 ### Features Left to Implement
 
-
+- [13](https://github.com/RobynSoar/dream-portal/issues/13) - Manage Posts
+    - Ability for users to post their own dreams, have their own profiles.
+- [17](https://github.com/RobynSoar/dream-portal/issues/17) - Statistics Page
+    - Ability for authors to see their 'stats' for when dreams/ nightmares occured. etc.
+- [18](https://github.com/RobynSoar/dream-portal/issues/18) - Share
+    - Ability to share in app and enternally to a user or to the public via link.
+- [19](https://github.com/RobynSoar/dream-portal/issues/19) - Optional Extra
+    - Ability to post day dreamt without posting an empty blog
+- [20](https://github.com/RobynSoar/dream-portal/issues/20) - Light/Dark Mode
+    - Ability to change website colour palette to suit time of day.
 
 [Return to Table of Contents](#table-of-contents)
 
 ## Agile Methodology
-
-### User Stories
-
-
 
 ### Kanban Board
 
