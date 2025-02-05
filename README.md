@@ -426,6 +426,23 @@ The following colour palette was used thorugh the site, providing a simple and g
 
 ## Testing
 
+### CRUD Testing
+
+***Comment CRUD Testing for Registered User***
+
+  | **Testing**               |  **Expected Outcome**  | **Actual Outcome**  |
+  |:---                       |         :---:          |          :---:      | 
+  |Create comment for own post?|Comment Form visible and Submit Comment button triggers successful submission alert|As expected|  
+  |Create comment for another user's post|Comment Form visible and Submit Comment button triggers successful submission alert|As expected| 
+  |Read all comments for all posts?|Comments visible as a list, or message stating "No comments yet" if none submitted|As expected|   
+  |Read own comment in comment form when editing?|Comment content populated in Comment Form when Edit Comment btn clicked|As expected|
+  |Edit own comment?|Edit button visible. Update Comment button triggers successful submission alert. Displays (edited)|As expected|
+  |Delete own comment?|Delete Comment button visible. Delete Comment Modal triggered when clicked. Delete in model triggers success alert|As expected| 
+  |Delete own comment?|Delete Comment button visible. Delete Comment Modal triggered when clicked. Delete in model triggers success alert|As expected|
+  |Add like to posts?|Like button visible. Like button triggers. Like count increases|As expected|
+  |Add bookmark?|Bookmark button visible. Bookmark button triggers. Bookmark button becomes solid|As expected|
+  |                           |                        |                     | 
+
 ### User Story Testing
 
 
